@@ -1,2 +1,5 @@
 django==2.2.2
 pylint-django==2.4.4
+
+
+まだ習わないこと python manage.py runserver --setting=config.settings_dev
