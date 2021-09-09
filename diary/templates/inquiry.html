@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
-{% load static %}
 
-{% block title %}お問合せ | Private Diary{% endblock %}
+{% block title %}お問い合わせ Private Diary{% endblock %}
 
+{% block active_inquiry %}active{%endblock %}
 {% block contents %}
-<!-- Content section 1-->
-<section id="scroll">
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            <form method="POST">
+<div class="container">
+    <div class="row">
+        <div class="my-div-style">
+            <form method="post">
                 {% csrf_token %}
-                {{ form.non_field_errors }}
+
+                {{form.non_field_errors}}
 
                 {% for field in form %}
                 <div class="form-group row">
                     <label for="{{ field.id_for_label}}" class="col-sm-4 col-form-label">
-                        <strong>{{ field.label_tag}}</strong>
+                        <strong>{{ field.label_tag }}</strong>
                     </label>
                     <div class="col-sm-8">
-                        {{field}}
-                        {{field.errors}}
+                        {{ field }}
+                        {{ field.errors }}
                     </div>
                 </div>
                 {% endfor %}
@@ -30,5 +30,5 @@
             </form>
         </div>
     </div>
-</section>
+</div>
 {% endblock %}

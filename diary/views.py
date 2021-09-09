@@ -19,4 +19,3 @@ class InquiryView(generic.FormView):
         form.send_email()
         logger.info('Inquiry sent by {}'.format(form.cleaned_data['name']))
         return super().form_valid(form)
-
