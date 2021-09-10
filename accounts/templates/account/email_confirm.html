@@ -10,7 +10,7 @@
         <div class="my-div-style">
             <h1>ユーザー登録</h1>
 
-            {% if Confirmation %}
+            {% if confirmation %}
             <p>ユーザー登録を確定するには、以下のボタンを押してください。</p>
 
             <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
