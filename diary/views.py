@@ -22,7 +22,8 @@ class InquiryView(generic.FormView):
 
 class DiaryListView(LoginRequiredMixin, generic.ListView):
     model = Diary
-    template_name = 'diary_list.html'
+    template_name = 'diary_detail.html'
+    pk_url_kwatg = 'id'
 
     def form_valid(self, form): 
         form.send_email()
